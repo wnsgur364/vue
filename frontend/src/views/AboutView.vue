@@ -1,6 +1,25 @@
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+
+const str = ref("");
+
+// axios로 Spring Boot에 GET request를 보냄
+axios
+  .get("/api/about")
+  .then((res) => {
+    console.log(res.data);
+    console.log(res.data.str);
+    str.value = res.data.str;
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>{{ str }}</h1>
   </div>
 </template>
 
