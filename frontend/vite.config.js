@@ -14,7 +14,7 @@ export default defineConfig({
     }
   }, 
   build: {
-    outDir: "../../prj_spring_orange/backend/src/main/resources/static",
+    outDir: "../../../SpringBoot/prj_spring_orange/backend/src/main/resources/static",
   }, // 빌드 결과물이 생성되는 경로
   server: {
     proxy: {
