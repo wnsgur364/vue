@@ -21,11 +21,6 @@ const router = new VueRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
     },
-    {
-      path: "/board",
-      name: "board",
-      component: () => import("../views/BoardList.vue"),
-    },
   ],
 });
 
